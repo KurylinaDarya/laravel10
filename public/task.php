@@ -26,13 +26,6 @@ class Worker
     public function getSalary() {
         return $this->salary;
     }
-    public function NameSalary() {
-        printf(
-            'Имя: %s, возраст: %s<br>',
-            $this->getName(),
-            $this->getAge()
-        );
-    }
 }
 $ivan = new Worker;
 $ivan->setName('Иван');
@@ -51,6 +44,7 @@ echo 'Сумма зарплат: ' . $sumSalary . '<br>';
 echo 'Сумма возрастов: ' . $sumAge . '<br>';
 
 
+/* Задача 1 - Public поля */
 //class Worker {
 // public $name;
 //    public $age;
