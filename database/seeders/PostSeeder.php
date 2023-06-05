@@ -13,14 +13,18 @@ class PostSeeder extends Seeder
      */
     public function run(): void
     {
-       if (Post::count() == 0){
-           for ($i=0; $i<2; $i++){
-               Post::create([
-                  'title' => 'Post '.$i,
-                   'slug' => 'post-'.$i,
-                   'content' => 'Post content '.$i,
-               ]);
-           }
-       }
+        Post::factory()->count(3)->create();
     }
+//    public function run(): void
+//    {
+//       if (Post::count() == 0){
+//           for ($i=0; $i<2; $i++){
+//               Post::create([
+//                  'title' => 'Post '.$i,
+//                   'slug' => 'post-'.$i,
+//                   'content' => 'Post content '.$i,
+//               ]);
+//           }
+//       }
+//    }
 }
