@@ -8,7 +8,7 @@
                 <div class="blog-img mb-30">
                     @if(!empty($post->image))
                     <a href="blog-details-standerd.html">
-                        <img src="assets/img/blog/blog-1.jpg" alt="">
+                        <img src="{{$post->image}}" alt="">
                     </a>
                     @endif
                 </div>
@@ -24,12 +24,11 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 <div class="blog-btn-social mt-30">
                     <div class="blog-btn">
-                        <a href="blog-details-standerd.html">read more</a>
+                        <a href="{{route('blog-post', $post->slug)}}">read more</a>
                     </div>
                 </div>
             </div>
         @endforeach
-
         {{--
         <div class="pagination-total-pages mt-50">
             <div class="pagination-style">

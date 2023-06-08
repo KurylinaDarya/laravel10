@@ -11,23 +11,23 @@ class PostSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run(): void
-    {
-        Post::factory()->count(3)->create();
-    }
 //    public function run(): void
 //    {
-//       if (Post::count() == 0){
-//           for ($i=0; $i<2; $i++){
-//               $rand = rand(0, 1);
-//               $randImage = $rand ? fake()->imageUrl : null;
-//               Post::create([
-//                  'title' => 'Post '.$i,
-//                   'slug' => 'post-'.$i,
-//                   'content' => 'Post content '.$i,
-//                   'image' => $randImage
-//               ]);
-//           }
-//       }
+//        Post::factory()->count(3)->create();
 //    }
+    public function run(): void
+    {
+       if (Post::count() == 0){
+           for ($i=1; $i<5; $i++){
+               $rand = rand(0, 1);
+               $randImage = $rand ? fake()->imageUrl : null;
+               Post::create([
+                  'title' => 'Запись в блоге '.$i,
+                   'annotation' => 'Post annotation '.$i,
+                   'content' => fake() -> paragraph(3),
+                   'image' => $randImage
+               ]);
+           }
+       }
+    }
 }
