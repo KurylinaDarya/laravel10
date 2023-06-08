@@ -19,10 +19,13 @@ class PostSeeder extends Seeder
 //    {
 //       if (Post::count() == 0){
 //           for ($i=0; $i<2; $i++){
+//               $rand = rand(0, 1);
+//               $randImage = $rand ? fake()->imageUrl : null;
 //               Post::create([
 //                  'title' => 'Post '.$i,
 //                   'slug' => 'post-'.$i,
 //                   'content' => 'Post content '.$i,
+//                   'image' => $randImage
 //               ]);
 //           }
 //       }
