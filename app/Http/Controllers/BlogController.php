@@ -8,7 +8,9 @@ use Illuminate\Http\Request;
 class BlogController extends Controller
 {
    public function index(){
-       return view('blog', ['posts'=>Post::all()]);
+       $count = Post::count();
+       $posts = Post::all();
+       return view('blog', ['posts'=>$posts]);
    }
 
 public function show($slug) {

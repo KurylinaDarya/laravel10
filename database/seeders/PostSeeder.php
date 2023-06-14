@@ -28,6 +28,7 @@ class PostSeeder extends Seeder
                    'image' => $randImage
                ]);
            }
+           \App\Models\Post::factory(10)->create()->make();
        }
     }
 }

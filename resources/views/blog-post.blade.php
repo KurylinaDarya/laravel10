@@ -1,4 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.phuler')
 @section('content')
-    {{$post->title}}
+    <h2>{{$post->title}}</h2>
+    <h3>Комментарий:</h3>
+    @foreach($post->comments as $comment)
+        @include('comment')
+    @endforeach
 @endsection
