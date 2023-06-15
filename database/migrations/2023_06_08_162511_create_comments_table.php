@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('сomments', function (Blueprint $table) {
+        Schema::create('comments', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('name', 25)->nullable(false);
-            $table->string('email', 20)->nullable(false);
-            $table->text('comment', 250)->nullable(true);
+            $table->string('name');
+            $table->string('email');
+            $table->text('comment', 250);
             $table->unsignedBigInteger('post_id');
 
             $table->index('post_id', 'comment_post_idx');
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('сomments');
+        Schema::dropIfExists('comments');
     }
 };
